@@ -1,0 +1,3 @@
+{{ with .Get 0 | $.Page.Resources.GetMatch }}
+<a href="{{ .RelPermalink }}"><img src="{{ (.Resize "x384 Gaussian q85").RelPermalink }}" title="{{ $.Get 1 }}" /></a>
+{{ end }}

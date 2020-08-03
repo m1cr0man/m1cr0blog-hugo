@@ -1,0 +1,12 @@
+name: M1cr0blog
+license: MIT
+licenselink: "https://github.com/m1cr0man/m1cr0blog-hugo/blob/master/LICENSE"
+description: Personal blog
+homepage: "http://m1cr0man.com/"
+tags: []
+features: []
+min_version: 0.41
+
+author:
+  name: Lucas Savva
+  homepage: "http://m1cr0man.com/"

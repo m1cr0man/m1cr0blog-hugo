@@ -1,0 +1,6 @@
+baseURL: "http://m1cr0man.com/"
+publishDir: dist
+languageCode: en-ie
+title: M1cr0blog
+theme: m1cr0blog
+MetaDataFormat: yaml

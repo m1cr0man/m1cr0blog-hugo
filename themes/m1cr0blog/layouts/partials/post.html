@@ -1,0 +1,37 @@
+<article class="blog-body blog-post">
+	<header>
+		<h1>{{ .Title }}</h1>
+		<time>{{ .Date.Format "January 2, 2006" }}</time>
+	</header>
+
+	<hr>
+
+	<figure class="primary-image">
+		<a href='{{ (.Params.mainimage | .Resources.GetMatch).RelPermalink }}'>
+			<img src='{{ ((.Params.mainimage | .Resources.GetMatch).Resize "x480 Gaussian q85").RelPermalink }}' alt="{{ .Title }}">
+		</a>
+	</figure>
+
+	<div>
+		{{ .Content }}
+	</div>
+</article>
+
+<section class="blog-body pure-g">
+	<div class="pure-u-1 pure-g">
+		<header class="pure-u-1">
+			<h2>More Articles</h2>
+			<hr>
+		</header>
+		{{ range first 2 (where (where .Site.RegularPages "Section" "posts") "Params.title" "!=" .Params.title) }}
+		<aside class="pure-u-1 pure-u-lg-1-2">
+			<a href="{{ .RelPermalink }}" class="next-article" style="background-image: url('{{ ((.Params.mainimage | .Resources.GetMatch).Resize "x384 Gaussian q85").RelPermalink }}');">
+				<div>
+					<h3>{{ .Title }}</h3>
+					<time>{{ .Date.Format "January 2, 2006" }}</time>
+				</div>
+			</a>
+		</aside>
+		{{ end }}
+	</div>
+</section>
