@@ -2,8 +2,8 @@
 title: I Restored a 26 Year Old Printer
 date: 2016-09-16T12:00:00+01:00
 Description: A printer from a time long before economic engineering.
-Tags:
-    - TI
+tags:
+    - ti
     - hardware
     - vintage
     - printers

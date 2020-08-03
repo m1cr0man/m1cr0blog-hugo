@@ -2,6 +2,6 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 Description: ""
-Tags: []
+tags: []
 MainImage: ""
 ---

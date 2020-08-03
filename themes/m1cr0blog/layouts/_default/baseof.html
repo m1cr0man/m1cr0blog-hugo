@@ -13,7 +13,7 @@
 		<meta property="og:site_name" content="M1cr0blog">
 		<meta property="og:type" content= "website" />
 		<meta name="twitter:url" property="og:url" content="{{ .Permalink }}">
-{{	$title := cond .IsPage (printf "%s - %s" .Title .Site.Title) .Site.Title }}
+{{	$title := cond (ne .Title "") (printf "%s - %s" .Title .Site.Title) .Site.Title }}
 		<title>{{ $title }}</title>
 		<meta name="twitter:title" property="og:title" itemprop="title name" content="{{ $title }}">
 {{- if .IsPage }}

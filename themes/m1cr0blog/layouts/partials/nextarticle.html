@@ -1,0 +1,8 @@
+<aside class="pure-u-1 pure-u-lg-1-2">
+    <a href="{{ .RelPermalink }}" class="next-article" style="background-image: url('{{ ((.Params.mainimage | .Resources.GetMatch).Resize "x384 Gaussian q85").RelPermalink }}');">
+        <div>
+            <h3>{{ .Title }}</h3>
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+        </div>
+    </a>
+</aside>

@@ -2,7 +2,7 @@
 title: Gaming On Linux - Not Just For Hipsters
 date: 2018-12-23T12:00:00+01:00
 Description: 2019 might be the golden year for Linux gaming
-Tags:
+tags:
     - linux
     - gaming
 mainimage: images/breaking_glass.jpg
