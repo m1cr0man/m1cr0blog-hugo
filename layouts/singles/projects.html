@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="blog-body pure-g">
+    <h1 class="pure-u-1">Ongoing Projects</h1>
+    <article class="pure-u-1">
+        <h2>M1cr0blog</h2>
+        <p>My blog is, and always will be, a work in progress. It is my playground for new web technologies and languages. Even this section of my blog was unfinished for years. Thanks for checking it out now! I also built my own dropbox-like sharing solution into the site which I use along side ShareX.</p>
+        <p>Tech: <a href="https://gohugo.io">Hugo</a>, previously <a href="https://nestjs.com/">NestJS</a></p>
+        <p>Github: <a href="https://github.com/m1cr0man/m1cr0blog-hugo">m1cr0blog-hugo</a></p>
+    </article>
+    <article class="pure-u-1">
+        <h2>Land Rover Restorations</h2>
+        <p>I'm in the process of restoring two ex military Land Rovers. One is a '79 Lightweight, the other is a '77 101 Ambulance. This has been a joint venture of my dad and I for the past number of years. Progress updates usually end up on my Twitter. I am also a walking encyclopedia for all things Land Rover.</p>
+        <p>Tech: Welding, sand blasting, reverse engineering.</p>
+        <p>Github: No</p>
+    </article>
+    <article class="pure-u-1">
+        <h2>Steam Pump</h2>
+        <p>Three gaming PCs, one 4G internet connection. Downloading games that are up to date on another computer is not a sensible thing to do. Steampump provides a way to copy games from one computer on the local network to another, straight into the Steam steamapps folder. Its web UI streamlines the process for non technical end users and provides an overview of all available games on the network and a one-click system to sync the game to the local PC.</p>
+        <p>Tech: <a href="https://golang.org/">Go</a>, <a href="https://github.com/ryansolid/solid">SolidJS</a></p>
+        <p>Github: <a href="https://github.com/m1cr0man/steampump">steampump</a></p>
+    </article>
+    <article class="pure-u-1">
+        <h2>Network Booting Gaming OS</h2>
+        <p>With the current rise in Linux gaming, what better way to play all your old games at any time you want than to build a network bootable Linux distribution that launches games from an NFS share. Built entirely with NixOS.</p>
+        <p>Tech: <a href="https://nixos.org/">NixOS</a></p>
+        <p>Github: Coming Soon</p>
+    </article>
+    <article class="pure-u-1">
+        <h2>Redbrick Administrator</h2>
+        <p>I'm a "rootholder" for the Redbrick Networking Society at DCU. They made the mistake of electing me as an admin one year, and I converted 75% of the servers to NixOS. Muahahaha. Redbrick runs email, web, IRC, and project hosting for its members.</p>
+        <p>Tech: NixOS, complete self hosting stack (Bind, Apache, Mysql, Postfix, etc), human persuasion</p>
+        <p>Github: <a href="https://github.com/redbrick/nix-configs">Redbrick nix-configs</a></p>
+        <p>Blog post: <a href="https://blog.redbrick.dcu.ie/post/2020-05-30/">Admin Jones and the Redbrick Mail Stack</a></p>
+    </article>
+    <h1 class="pure-u-1">Shelved Projects</h1>
+    <article class="pure-u-1">
+        <h2>Backup Buffet</h2>
+        <p>Once upon a time I had a lot of old, working hard disks and a couple of terabytes of data to back up. Backup Buffet was built to allow me to use these drives to back up data. Tracked distribution of a backup across multiple drives accounting for where files were and what needs to be updated. I was able to plug in a drive, fill it, and move onto the next one. This is kind of like old tape backups or something, but it wouldn't be a project in 2020 if I didn't reinvent the wheel in Python.</p>
+        <p>Github: <a href="https://github.com/m1cr0man/BackupBuffet">BackupBuffet</a></p>
+    </article>
+    <article class="pure-u-1">
+        <h2>Multi-User Gaming Rig</h2>
+        <p>Wouldn't it be great if two people could play AAA games on a single gaming computer? That was the plan when I tried to run two Windows VMs on one host with two graphics cards. Overall this would save energy and would mean that two people would benefit from upgrades to the host. Although I was able to get the entire system operational, some games have anti cheats which block their use in a VM, preventing most big titles from running in this environment.</p>
+        <p>Blog post: <a href="/posts/sharing-gaming-pc">Sharing a Gaming Computer with VMs</a></p>
+    </article>
+</section>
+{{ end }}

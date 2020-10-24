@@ -4,3 +4,5 @@ languageCode: en-ie
 title: M1cr0blog
 theme: m1cr0blog
 MetaDataFormat: yaml
+permalinks:
+  singles: "/:filename/"
