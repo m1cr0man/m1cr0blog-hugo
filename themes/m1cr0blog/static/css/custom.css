@@ -196,6 +196,10 @@ footer {
 
 /* Index next articles */
 
+#more-articles {
+	width: 100%;
+}
+
 .next-article {
 	width: 90%;
 	height: 256px;

@@ -22,11 +22,11 @@
 </article>
 
 <section class="blog-body pure-g">
-	<div class="pure-u-1 pure-g">
-		<header class="pure-u-1">
-			<h2>More Articles</h2>
-			<hr>
-		</header>
+	<header class="pure-u-1">
+		<h2>More Articles</h2>
+		<hr>
+	</header>
+	<div id="more-articles" class="pure-g">
 		{{ range first 2 (where (where .Site.RegularPages "Section" "posts") "Params.title" "!=" .Params.title) }}
 		{{- partial "nextarticle.html" . -}}
 		{{ end }}
