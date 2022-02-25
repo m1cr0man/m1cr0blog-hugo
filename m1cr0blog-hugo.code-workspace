@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.profiles.linux": {
+			"Nix Shell": {
+				"path": "nix-shell",
+				"icon": "terminal-linux",
+			},
+		},
+		"terminal.integrated.defaultProfile.linux": "Nix Shell",
+		"debug.allowBreakpointsEverywhere": true,
+		"nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	},
+	"extensions": {
+		"recommendations": [
+			"arrterian.nix-env-selector"
+		]
+	}
+}
