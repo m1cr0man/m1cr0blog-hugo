@@ -12,7 +12,8 @@
 
 	<figure class="primary-image">
 		<a href='{{ (.Params.mainimage | .Resources.GetMatch).RelPermalink }}'>
-			<img src='{{ ((.Params.mainimage | .Resources.GetMatch).Resize "x480 Gaussian q85").RelPermalink }}' alt="{{ .Title }}">
+			<img src='{{ ((.Params.mainimage | .Resources.GetMatch).Resize "x480 Gaussian q85").RelPermalink }}'
+				alt="{{ .Title }}">
 		</a>
 	</figure>
 
@@ -27,7 +28,7 @@
 		<hr>
 	</header>
 	<div id="more-articles" class="pure-g">
-		{{ range first 2 (where (where .Site.RegularPages "Section" "posts") "Params.title" "!=" .Params.title) }}
+		{{ range first 4 (where (where .Site.RegularPages "Section" "posts") "Params.title" "!=" .Params.title) }}
 		{{- partial "nextarticle.html" . -}}
 		{{ end }}
 	</div>

@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="m1cr0man">
-		<meta name="creator" content="m1cr0man">
-		<meta name="publisher" content="m1cr0man">
-		<meta name="twitter:site" content="@m1cr0m4n">
-		<meta name="twitter:domain" content="m1cr0man.com"/>
-		<meta name="twitter:creator" content="@m1cr0m4n">
-		<meta property="og:site_name" content="M1cr0blog">
-		<meta property="og:type" content= "website" />
-		<meta name="twitter:url" property="og:url" content="{{ .Permalink }}">
-{{	$title := cond (ne .Title "") (printf "%s - %s" .Title .Site.Title) .Site.Title }}
-		<title>{{ $title }}</title>
-		<meta name="twitter:title" property="og:title" itemprop="title name" content="{{ $title }}">
-{{- if .IsPage }}
-		<meta name="description" content="{{ .Description }}">
-		<meta name="twitter:description" property="og:description" itemprop="description" content="{{ .Description }}">
-		<meta name="twitter:card" content="summary_large_image">
-{{- else }}
-		<meta name="description" content="My blog">
-		<meta name="twitter:description" content="My blog" />
-		<meta name="twitter:card" content="summary">
-{{ end -}}
-{{- if isset .Params "mainimage" }}
-		<meta name="twitter:image" property="og:image" itemprop="image primaryImageOfPage" content="{{ (.Params.mainimage | .Resources.GetMatch).Permalink }}">
-{{- else }}
-		<meta name="twitter:image" content="https://m1cr0man.com/images/m1cr0man.png" />
-{{ end -}}
 
-		<!-- Favicon -->
-		<link rel="icon" href="/favicon.ico?v=057651f691c119d4501eaabc3de181e1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="m1cr0man">
+	<meta name="creator" content="m1cr0man">
+	<meta name="publisher" content="m1cr0man">
+	<meta name="twitter:site" content="@m1cr0m4n">
+	<meta name="twitter:domain" content="m1cr0man.com" />
+	<meta name="twitter:creator" content="@m1cr0m4n">
+	<meta property="og:site_name" content="M1cr0blog">
+	<meta property="og:type" content="website" />
+	<meta name="twitter:url" property="og:url" content="{{ .Permalink }}">
+	{{ $title := cond (ne .Title "") (printf "%s - %s" .Title .Site.Title) .Site.Title }}
+	<title>{{ $title }}</title>
+	<meta name="twitter:title" property="og:title" itemprop="title name" content="{{ $title }}">
+	{{- if .IsPage }}
+	<meta name="description" content="{{ .Description }}">
+	<meta name="twitter:description" property="og:description" itemprop="description" content="{{ .Description }}">
+	<meta name="twitter:card" content="summary_large_image">
+	{{- else }}
+	<meta name="description" content="My blog">
+	<meta name="twitter:description" content="My blog" />
+	<meta name="twitter:card" content="summary">
+	{{ end -}}
+	{{- if isset .Params "mainimage" }}
+	<meta name="twitter:image" property="og:image" itemprop="image primaryImageOfPage"
+		content="{{ (.Params.mainimage | .Resources.GetMatch).Permalink }}">
+	{{- else }}
+	<meta name="twitter:image" content="https://m1cr0man.com/images/m1cr0man.png" />
+	{{ end -}}
 
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="/css/custom.css">
+	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico?v=057651f691c119d4501eaabc3de181e1">
 
-		<!-- Pure CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/pure-min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/css/custom.css">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/grids-responsive-min.css">
-	</head>
+	<!-- Pure CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/pure-min.css">
 
-	<body>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/grids-responsive-min.css">
+</head>
 
-		<nav class="pure-menu pure-menu-horizontal">
-			<ul class="pure-menu-list">
-				<li class="pure-menu-item">
-					<a href="/" id="logo" class="pure-menu-heading pure-menu-link">
-						<img style="height: 80px;" src="/images/m1cr0man-small.png" alt="M1cr0man Logo">
-					</a>
-				</li>
-				<li class="pure-menu-item"><a href="/" class="pure-menu-link">Blog</a></li>
-				<li class="pure-menu-item"><a href="/projects" class="pure-menu-link">Projects</a></li>
-			</ul>
-		</nav>
+<body>
 
-		<main>
-			{{- block "main" . }}{{- end }}
-		</main>
+	<nav class="pure-menu pure-menu-horizontal">
+		<ul class="pure-menu-list">
+			<li class="pure-menu-item">
+				<a href="/" id="logo" class="pure-menu-heading pure-menu-link">
+					<img style="height: 80px;" src="/images/m1cr0man-small.png" alt="M1cr0man Logo">
+				</a>
+			</li>
+			<li class="pure-menu-item"><a href="/" class="pure-menu-link">Blog</a></li>
+			<li class="pure-menu-item"><a href="/projects" class="pure-menu-link">Projects</a></li>
+		</ul>
+	</nav>
 
-		<footer class="pure-u-1-1">
-			<p class="text-muted">© 2020 m1cr0man. Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and <a href="http://purecss.io" target="_blank" rel="noopener">PureCSS</a></p>
-		</footer>
-	</body>
+	<main>
+		{{- block "main" . }}{{- end }}
+	</main>
+
+	<footer class="pure-u-1-1">
+		<p class="text-muted">© 2023 m1cr0man. Powered by <a href="https://gohugo.io" target="_blank"
+				rel="noopener">Hugo</a> and <a href="http://purecss.io" target="_blank" rel="noopener">PureCSS</a></p>
+	</footer>
+</body>
+
 </html>
