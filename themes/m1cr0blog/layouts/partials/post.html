@@ -4,7 +4,7 @@
 		<h1>{{ .Title }}</h1>
 		<div>
 			<time>{{ .Date.Format "January 2, 2006" }}</time>
-			<p><b>Tags:</b> {{ delimit $tagpages ", " }}</p>
+			<p><b>Tags:</b> {{ (delimit $tagpages ", ") | safeHTML }}</p>
 		</div>
 	</header>
 
